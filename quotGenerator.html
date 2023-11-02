@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <script src="quoteGenerator.js"></script>
+    <link rel="stylesheet" href="quoteGenerator.css">
+</head>
+<body>
+        <div class="container">
+            <div class="main-heading">
+                Javascript Quote Generator
+            </div>
+
+            <div class="text-area">
+                <span class="quote">
+                    Lorem ipsum dolor sit amet, consectetur 
+                    adipisicing elit. Excepturi, odio!
+                </span>
+                <div class="person"> 
+                    - Abraham Lincoln
+                </div>
+                <div class="button-area">
+                    <button class="btn"> New Quote</button>
+                </div>
+
+            </div>
+        
+        </div>
+
+        <script>
+            let button = document.querySelector('.btn')
+            let quote = document.querySelector('.quote')
+            let person = document.querySelector('.person')
+
+            let quotes = [
+            {
+                quote:"I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times",
+                person: "Bruce Lee"
+            },
+            {   
+                quote:"I say luck is when an opportunity comes along and you're prepared for it.",
+                person : " Denzel Washington"
+            },
+            {
+                quote: "There's a difference in thinking you are a champion and knowing that you are.",
+                person: "Matthew McConaughey"
+            },
+            {
+                quote: "If you live a life of make-believe, your life isn't worth anything until you do something that does challenge your reality. And to me, sailing the open ocean is a real challenge, because it's life or death.",
+                person: "Morgan Freeman"
+            },
+            {
+                quote:"They say marriages are made in Heaven. But so is thunder and lightning.",
+                person :"Clint Eastwood"
+            },
+            {
+                quote: "Even if you're on the right track, you'll get run over if you just sit there.",
+                person :"Will Rogers"
+            },
+            {
+                quote:"Don't let yesterday use up too much of today. ",
+                person:"Will Rogers"
+            },
+            {
+                
+            }
+
+            ]
+
+            button.addEventListener('click',function(){
+
+                let random = Math.floor(Math.random() * quotes.length)
+                quote.innerText = quotes[random].quote
+                person.innerText = quotes[random].person
+            })
+        </script>
+</body>
+</html>
