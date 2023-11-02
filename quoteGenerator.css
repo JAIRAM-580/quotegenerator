@@ -2,7 +2,7 @@ body{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box; 
-    background:url('bgg.jpg') no-repeat center center/cover ; 
+    background:url('../bgg.jpg') no-repeat center center/cover ; 
 }
 .container{
     text-align: center;
